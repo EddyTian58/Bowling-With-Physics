@@ -29,9 +29,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
         isBallLaunched = true;
         transform.parent = null;
         // ^ set object parent to outermost layer of hierarchy
+        ballRB.isKinematic = false;
         ballRB.AddForce(launchIndicator.forward * force, ForceMode.Impulse);
         launchIndicator.gameObject.SetActive(false);
-        ballRB.isKinematic = false;
         ballRB.AddForce(transform.forward*force, ForceMode.Impulse);
     }
 }
