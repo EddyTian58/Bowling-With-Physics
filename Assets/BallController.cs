@@ -5,6 +5,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     [SerializeField] private float force = 1f;
     [SerializeField] private Transform ballAnchor;
+    [SerializeField] private Transform launchIndicator;
     [SerializeField] InputManager inputManager;
 
     private bool isBallLaunched;
@@ -28,6 +29,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         isBallLaunched = true;
         transform.parent = null;
         // ^ set object parent to outermost layer of hierarchy
+        ballRB.AddForce(launchIndicator.forward * force, ForceMode.Impulse);
+        launchIndicator.gameObject.SetActive(false);
         ballRB.isKinematic = false;
         ballRB.AddForce(transform.forward*force, ForceMode.Impulse);
     }
