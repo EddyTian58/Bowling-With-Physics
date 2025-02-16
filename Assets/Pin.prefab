@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6605874902352101229}
   - component: {fileID: 6834517779321207589}
   - component: {fileID: 2510974416657871052}
+  - component: {fileID: 6143311275067084117}
+  - component: {fileID: 3833740432617477647}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Untagged
@@ -138,3 +140,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6143311275067084117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297046087706479496}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1306958, y: 0.14918041, z: 1.0000005}
+  m_Center: {x: 0.002108097, y: 1.0097296, z: -0.00000023841858}
+--- !u!114 &3833740432617477647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297046087706479496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c0d9d35b4b29047a072c0f18362a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPinFall:
+    m_PersistentCalls:
+      m_Calls: []
+  isPinFallen: 0
