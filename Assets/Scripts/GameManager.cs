@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         // We first make sure that all the previous pins have been destroyed
         // this is so that we don't create a new collection of
-        //standing pins on top of already fallen pins
+        // standing pins on top of already fallen pins
 
         if (pinObjects)
         {
@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-
             Destroy(pinObjects);
         }
 
@@ -60,7 +59,6 @@ public class GameManager : MonoBehaviour
         Quaternion.identity, transform);
 
         // We add the Increment Score function as a listener to
-
         // the OnPinFall event each of new pins
         fallTriggers = FindObjectsByType<FallTrigger>(FindObjectsInactive.Include,
         FindObjectsSortMode.None);
